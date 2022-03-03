@@ -1,0 +1,18 @@
+{% extends 'AdminPage.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table>
+    <tr>
+        <td>Id</td><td><input type="text" name="t1" value="{{id}}" id=""></td>
+    </tr>
+    <tr>
+        <td>Warning</td><td><input type="text" name="t2" id=""></td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="sub1" value="Submit"><input type="submit" name="sub2" value="Remove"></td>
+    </tr>
+
+</table>
+    {% endblock %}
+        

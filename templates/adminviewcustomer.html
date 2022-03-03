@@ -1,0 +1,27 @@
+{% extends 'AdminPage.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+<table class="customers">
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+</tr> 
+    
+    {% for d in data %}
+     
+    <tr>
+    <td>{{d.0}}</td>
+    <td>{{d.1}}</a></td>
+    <td>{{d.4}}</td>
+    <td>{{d.8}}</td>
+    
+    </tr>
+  
+    {% endfor %}
+</table>
+    {% endblock %}
+        
